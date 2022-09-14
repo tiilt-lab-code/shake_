@@ -15,9 +15,10 @@ basic.forever(function () {
         music.playTone(262, music.beat(BeatFraction.Breve))
         finish = control.millis()
         basic.showNumber((finish - start) / 1000)
+    } else if (shake < max) {
+        led.plotBarGraph(
+        shake,
+        max
+        )
     }
-    led.plotBarGraph(
-    shake,
-    max
-    )
 })
